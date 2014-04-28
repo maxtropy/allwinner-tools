@@ -48,7 +48,7 @@ size = 1024
 ;     4、size_hi + size_lo = 0, 表示此分区不存在
 ;********************************************************************************************************
 [part_num]
-num     = 3
+num     = 4
 
 [partition0]
     class_name  = DISK
@@ -70,10 +70,14 @@ num     = 3
     class_name  = DISK
     name        = rootfs
     size_hi     = 0
-    size_lo     = 1524288
+    size_lo     = 1524736
     user_type   = 0
     ro          = 0
-
+[partition3]
+    class_name  = DISK
+    name        = data
+    size_hi     = 0
+    size_lo     = 2395136
 
 ;********************************************************************************************************************
 ;                     固件包下载位置 ： 把某个固件包下载到指定分区, 下载次数最大为7次
@@ -96,7 +100,7 @@ num     = 3
 ;      verify_file  = VERIFY_000000000
 ;********************************************************************************************************************
 [down_num]
-down_num    = 3
+down_num    = 4
 
 [download0]
 part_name   = bootloader
@@ -111,4 +115,9 @@ encrypt     = 0
 [download2]
 part_name   = rootfs
 pkt_name    = ROOTFS_000000000
+encrypt     = 0
+
+[download3]
+part_name   = data
+pkt_name    = DATA_00000000000
 encrypt     = 0
