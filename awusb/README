@@ -1,1 +1,3 @@
-USB driver for A10 based devices. This driver is used only for FEL mode by LiveSuit for linux.
+version https://git-lfs.github.com/spec/v1
+oid sha256:e59e197314e1f10202eb53de15b64964c4cacf64aa4eb702e872679be3dc18b2
+size 95
